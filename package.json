@@ -1,50 +1,36 @@
 {
-	"name": "superheroes",
-	"version": "3.0.0",
-	"description": "Get superhero names",
+	"name": "unique-random",
+	"version": "2.1.0",
+	"description": "Generate random numbers that are consecutively unique",
 	"license": "MIT",
-	"repository": "sindresorhus/superheroes",
+	"repository": "sindresorhus/unique-random",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
 		"url": "sindresorhus.com"
 	},
 	"engines": {
-		"node": ">=8"
+		"node": ">=6"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
 	},
 	"files": [
 		"index.js",
-		"index.d.ts",
-		"superheroes.json"
+		"index.d.ts"
 	],
 	"keywords": [
-		"word",
-		"words",
-		"list",
-		"array",
+		"unique",
 		"random",
-		"superheroes",
-		"superhero",
-		"heroes",
-		"hero",
-		"marvel",
-		"dc",
-		"comics"
+		"number",
+		"single",
+		"generate",
+		"non-repeating",
+		"consecutively"
 	],
-	"dependencies": {
-		"unique-random-array": "^2.0.0"
-	},
 	"devDependencies": {
 		"ava": "^1.4.1",
 		"tsd": "^0.7.2",
 		"xo": "^0.24.0"
-	},
-	"tsd": {
-		"compilerOptions": {
-			"resolveJsonModule": true
-		}
 	}
 }

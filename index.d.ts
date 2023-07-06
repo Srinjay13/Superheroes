@@ -1,31 +1,21 @@
-import superheroesJson = require('./superheroes.json');
+/**
+Generate random numbers that are consecutively unique.
 
-declare const superheroes: {
-	/**
-	Superhero names in alphabetical order.
+@returns A function, that when called, will return a random number that is never the same as the previous.
 
-	@example
-	```
-	import superheroes = require('superheroes');
+@example
+```
+import uniqueRandom = require('unique-random');
 
-	superheroes.all;
-	//=> ['3-D Man', 'A-Bomb', …]
-	```
-	*/
-	readonly all: Readonly<typeof superheroesJson>;
+const random = uniqueRandom(1, 10);
 
-	/**
-	Random superhero name.
+console.log(random(), random(), random());
+//=> 5 2 6
+```
+*/
+declare function uniqueRandom(
+	minimum: number,
+	maximum: number
+): () => number;
 
-	@example
-	```
-	import superheroes = require('superheroes');
-
-	superheroes.random();
-	//=> 'Spider-Ham'
-	```
-	*/
-	random(): string;
-}
-
-export = superheroes;
+export = uniqueRandom;

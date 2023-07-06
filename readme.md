@@ -1,56 +1,46 @@
-# superheroes [![Build Status](https://travis-ci.org/sindresorhus/superheroes.svg?branch=master)](https://travis-ci.org/sindresorhus/superheroes)
+# unique-random [![Build Status](https://travis-ci.org/sindresorhus/unique-random.svg?branch=master)](https://travis-ci.org/sindresorhus/unique-random)
 
-> Get superhero names
+> Generate random numbers that are consecutively unique
 
-<img src="https://cloud.githubusercontent.com/assets/170270/7563453/ad57a684-f7dd-11e4-8302-081f132e8653.png" width="100" height="112" align="right">
-
-The list is just a [JSON file](superheroes.json) and can be used anywhere.
+Useful for things like slideshows where you don't want to have the same slide twice in a row.
 
 
 ## Install
 
 ```
-$ npm install superheroes
+$ npm install unique-random
 ```
 
 
 ## Usage
 
 ```js
-const superheroes = require('superheroes');
+const uniqueRandom = require('unique-random');
 
-superheroes.all;
-//=> ['3-D Man', 'A-Bomb', …]
+const random = uniqueRandom(1, 10);
 
-superheroes.random();
-//=> 'Spider-Ham'
+console.log(random(), random(), random());
+//=> 5 2 6
 ```
 
 
 ## API
 
-### .all
+### uniqueRandom(minimum, maximum)
 
-Type: `string[]`
-
-Superhero names in alphabetical order.
-
-### .random()
-
-Type: `Function`
-
-Random superhero name.
+Returns a function, that when called, will return a random number that is never the same as the previous.
 
 
 ## Related
 
-- [superheroes-cli](https://github.com/sindresorhus/superheroes-cli) - CLI for this module
-- [supervillains](https://github.com/sindresorhus/supervillains) - Get supervillain names
-- [cat-names](https://github.com/sindresorhus/cat-names) - Get popular cat names
-- [dog-names](https://github.com/sindresorhus/dog-names) - Get popular dog names
-- [pokemon](https://github.com/sindresorhus/pokemon) - Get Pokémon names
-- [superb](https://github.com/sindresorhus/superb) - Get superb like words
-- [yes-no-words](https://github.com/sindresorhus/yes-no-words) - Get yes/no like words
+- [unique-random-array](https://github.com/sindresorhus/unique-random-array) - Get consecutively unique elements from an array
+- [random-int](https://github.com/sindresorhus/random-int) - Generate a random integer
+- [random-float](https://github.com/sindresorhus/random-float) - Generate a random float
+- [random-item](https://github.com/sindresorhus/random-item) - Get a random item from an array
+- [random-obj-key](https://github.com/sindresorhus/random-obj-key) - Get a random key from an object
+- [random-obj-prop](https://github.com/sindresorhus/random-obj-prop) - Get a random property from an object
+- [unique-random-at-depth](https://github.com/Aweary/unique-random-at-depth) - This module with an optional depth argument
+- [crypto-random-string](https://github.com/sindresorhus/crypto-random-string) - Generate a cryptographically strong random string
 
 
 ## License
