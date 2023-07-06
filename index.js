@@ -1,4 +1,6 @@
-import superheroes from "superheroes";
-// const superheroes = require('superheroes');
-var newname=superheroes.random();
-console.log(newname);
+'use strict';
+const uniqueRandomArray = require('unique-random-array');
+const superheroes = require('./superheroes.json');
+
+exports.all = superheroes;
+exports.random = uniqueRandomArray(superheroes);
