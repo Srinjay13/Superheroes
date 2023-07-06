@@ -1,6 +1,6 @@
-# unique-random [![Build Status](https://travis-ci.org/sindresorhus/unique-random.svg?branch=master)](https://travis-ci.org/sindresorhus/unique-random)
+# unique-random-array [![Build Status](https://travis-ci.org/sindresorhus/unique-random-array.svg?branch=master)](https://travis-ci.org/sindresorhus/unique-random-array)
 
-> Generate random numbers that are consecutively unique
+> Get consecutively unique elements from an array
 
 Useful for things like slideshows where you don't want to have the same slide twice in a row.
 
@@ -8,38 +8,41 @@ Useful for things like slideshows where you don't want to have the same slide tw
 ## Install
 
 ```
-$ npm install unique-random
+$ npm install unique-random-array
 ```
 
 
 ## Usage
 
 ```js
-const uniqueRandom = require('unique-random');
+const uniqueRandomArray = require('unique-random-array');
 
-const random = uniqueRandom(1, 10);
+const random = uniqueRandomArray([1, 2, 3, 4]);
 
-console.log(random(), random(), random());
-//=> 5 2 6
+console.log(random(), random(), random(), random());
+//=> 4 2 1 4
 ```
 
 
 ## API
 
-### uniqueRandom(minimum, maximum)
+### uniqueRandomArray(array)
 
-Returns a function, that when called, will return a random number that is never the same as the previous.
+Returns a function, that when called, will return a random element that's never the same as the previous.
+
+#### array
+
+Type: `unknown[]`
 
 
 ## Related
 
-- [unique-random-array](https://github.com/sindresorhus/unique-random-array) - Get consecutively unique elements from an array
+- [unique-random](https://github.com/sindresorhus/unique-random) - Generate random numbers that are consecutively unique
 - [random-int](https://github.com/sindresorhus/random-int) - Generate a random integer
 - [random-float](https://github.com/sindresorhus/random-float) - Generate a random float
 - [random-item](https://github.com/sindresorhus/random-item) - Get a random item from an array
 - [random-obj-key](https://github.com/sindresorhus/random-obj-key) - Get a random key from an object
 - [random-obj-prop](https://github.com/sindresorhus/random-obj-prop) - Get a random property from an object
-- [unique-random-at-depth](https://github.com/Aweary/unique-random-at-depth) - This module with an optional depth argument
 - [crypto-random-string](https://github.com/sindresorhus/crypto-random-string) - Generate a cryptographically strong random string
 
 

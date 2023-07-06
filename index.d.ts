@@ -1,21 +1,20 @@
 /**
-Generate random numbers that are consecutively unique.
+Get consecutively unique elements from an array.
 
-@returns A function, that when called, will return a random number that is never the same as the previous.
+@returns A function, that when called, will return a random element that is never the same as the previous.
 
 @example
 ```
-import uniqueRandom = require('unique-random');
+import uniqueRandomArray = require('unique-random-array');
 
-const random = uniqueRandom(1, 10);
+const random = uniqueRandomArray([1, 2, 3, 4]);
 
-console.log(random(), random(), random());
-//=> 5 2 6
+console.log(random(), random(), random(), random());
+//=> 4 2 1 4
 ```
 */
-declare function uniqueRandom(
-	minimum: number,
-	maximum: number
-): () => number;
+declare function uniqueRandomArray<ValueType>(
+	array: readonly ValueType[]
+): () => ValueType;
 
-export = uniqueRandom;
+export = uniqueRandomArray;

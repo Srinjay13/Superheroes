@@ -1,16 +1,16 @@
 {
-	"name": "unique-random",
-	"version": "2.1.0",
-	"description": "Generate random numbers that are consecutively unique",
+	"name": "unique-random-array",
+	"version": "2.0.0",
+	"description": "Get consecutively unique elements from an array",
 	"license": "MIT",
-	"repository": "sindresorhus/unique-random",
+	"repository": "sindresorhus/unique-random-array",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
 		"url": "sindresorhus.com"
 	},
 	"engines": {
-		"node": ">=6"
+		"node": ">=8"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -26,8 +26,13 @@
 		"single",
 		"generate",
 		"non-repeating",
-		"consecutively"
+		"array",
+		"item",
+		"element"
 	],
+	"dependencies": {
+		"unique-random": "^2.1.0"
+	},
 	"devDependencies": {
 		"ava": "^1.4.1",
 		"tsd": "^0.7.2",
