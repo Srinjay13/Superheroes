@@ -1,0 +1,15 @@
+{
+  "name": "task-npm",
+  "version": "1.0.0",
+  "description": "Try to do the task by myself",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Srinjay saha",
+  "license": "ISC",
+  "dependencies": {
+    "superheroes": "^3.0.0"
+  }
+}
